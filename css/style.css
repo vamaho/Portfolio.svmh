@@ -80,7 +80,7 @@ a,input{
     cursor: url('click.png')7 8,move;
 }
 #preloader{
-    background-color:white;
+    background-color:rgb(0, 0, 0);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -93,7 +93,6 @@ a,input{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 10%;
-    filter: invert(1);
 
     
 
@@ -187,63 +186,68 @@ noscript{
   }
   
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding:2rem 9% ;
-    background:transparent;
+    padding: 2rem 9%;
+    background: transparent; /* O un color de fondo si lo prefieres por defecto */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Mejor para logo a la izquierda y nav a la derecha */
     align-items: center;
     z-index: 100;
     transition: 0.3s;
-
 }
 
 .header.sticky {
-    position: fixed;
-    top: 0;
-    background: var(--bg-color); /* Change to your desired background color */
+    /* position: fixed; y top: 0; son redundantes aquí, ya están en .header */
+    background: var(--bg-color); /* Cambia al color de fondo deseado cuando se hace scroll */
 }
 
-
-.logo{
-    position: relative;
-    font-size:2.5rem ;  
+.logo {
+    position: relative; /* Mantener por si hay efectos internos */
+    font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
     overflow: hidden;
+    /* margin-right: auto; opcional si quieres empujar la nav completamente a la derecha */
 }
-.logo img{
+
+.logo img {
     height: 80px;
+    max-width: 100%; /* Asegura que la imagen no se desborde */
 }
-.navbar{
+
+.navbar {
     position: relative;
+    /* margin-left: auto; opcional si usas justify-content: space-between; y quieres empujar la nav a la derecha */
 }
-.navbar a{
+
+.navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
     font-weight: 500;
-    margin-left:3.5rem ;
+    margin-left: 3.5rem;
     transition: .3s;
-    cursor: url('click.png')10 12,move;
-
-
+    /* Considera una fuente de cursor alternativa o el valor 'default' si 'click.png' no siempre está disponible */
+    cursor: url('click.png') 10 12, pointer; /* 'pointer' como fallback */
 }
+
 .navbar a:hover,
-.navbar a.active{
-    color:var(--main-color);
+.navbar a.active {
+    color: var(--main-color);
 }
 
-#menu-icon{
-    position: relative;
+#menu-icon {
     font-size: 3.6rem;
     color: var(--text-color);
-    cursor: url('click.png')10 12,move;
-    display:none;
+    /* Considera una fuente de cursor alternativa o el valor 'default' si 'click.png' no siempre está disponible */
+    cursor: url('click.png') 10 12, pointer; /* 'pointer' como fallback */
+    display: none; /* Se oculta por defecto y se muestra en media queries para móvil */
+    z-index: 101; /* Asegura que esté por encima de la barra de navegación */
 }
+
 
 section{
     min-height: 100vh;
@@ -1210,57 +1214,60 @@ section:nth-child(odd) .animate.scroll{
         background: var(--bg-color);
     }
     #menu-icon{
-        display: block;
+        display: block; /* Muestra el ícono de menú en pantallas pequeñas */
     }
     .navbar{
         position: absolute;
-        top: 100%;
-        left: -100;
+        top: 100%; /* Coloca el menú justo debajo del header */
+        left: 0; /* Posiciona al inicio del viewport */
+        transform: translateX(-100%); /* Oculta el menú a la izquierda para la animación */
         width: 100%;
         padding: 1rem 4%;
         background: var(--main-color);
         box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
-        z-index: 1;
-        transition: .25s ease;
-        transition-delay: .25s;
-        display: none;
-        
+        z-index: 99; /* Asegura que esté por encima del contenido pero debajo del header fijo */
+        transition: transform .25s ease; /* Anima la propiedad 'transform' */
+        /* display: none; -- Removido para permitir transiciones de 'transform' */
+        flex-direction: column; /* Apila los enlaces verticalmente */
+        align-items: center; /* Centra los enlaces horizontalmente */
+        overflow-y: auto; /* Permite scroll si hay muchos enlaces */
+        height: auto; /* O un 'vh' como '100vh' si quieres que cubra toda la pantalla al abrir */
     }
     .navbar.active{
-        left: 0;
-        transition-delay: 0s;
-        display: block;
+        transform: translateX(0); /* Desliza el menú a la vista */
+        transition-delay: 0s; /* Inicia la transición inmediatamente */
+        /* display: block; -- Removido */
     }
     .navbar .active-nav{
         position: absolute;
         top: 0;
-        left:-100;
+        left: 0; /* Posiciona al inicio */
+        transform: translateX(-100%); /* Oculta la barra activa fuera de pantalla */
         width: 100%;
         height: 100%;
         background:var(--bg-color);
         border-top: .1rem solid rgba(0,0,0, .2);
         z-index: -1;
-        transition: .25s ease;
+        transition: transform .25s ease; /* Anima la propiedad 'transform' */
         transition-delay:0s ;
-    
     }
     .navbar.active .active-nav{
-        left: 0;
+        transform: translateX(0); /* Desliza la barra activa a la vista */
         transition-delay: .25s;
-
     }
     .navbar a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
-        transform: translateX(-20rem);
-        transition: .25s ease;
+        transform: translateX(-20rem); /* Oculta los enlaces individualmente */
+        transition: transform .25s ease; /* Anima la propiedad 'transform' */
         transition-delay: 0s;
+        text-align: center; /* Centra el texto de los enlaces */
     }
 
     .navbar.active a{
-        transform: translateX(0);
-        transition-delay:.25s ;
+        transform: translateX(0); /* Desliza los enlaces a la vista */
+        transition-delay:.25s ; /* Retrasa la aparición de los enlaces */
     }
     .home-imghover{
         pointer-events: none;
@@ -1294,9 +1301,8 @@ section:nth-child(odd) .animate.scroll{
     }
     .home-sci{
         width: 160px;
-    }
-    .home-sci{
-        width: 160px;
+        /* La siguiente línea es redundante, ya está definida */
+        /* width: 160px; */
     }
     .home-sci a{
         width: 38px;
@@ -1335,21 +1341,19 @@ section:nth-child(odd) .animate.scroll{
     .contact form .input-box .input-field{
         width: 100%;
     }
- 
+
     .footer p{
         text-align: center;
     }
     .footer-quote {
-        font-size: 1.7rem;
- 
+        font-size: 1.7rem; /* Mantener aquí, eliminar la redundancia de 399px */
     }
-   
-
 }
+
 @media(max-width:399px){
-    .footer-quote {
-        font-size: 1.7rem;
-    }
+    /* .footer-quote { */
+    /* font-size: 1.7rem; /* Esta línea es redundante, ya se define en @media(max-width:462px) */
+    /* } */
     .footer-text p{
         font-size: 1.4rem;
     }
@@ -1373,7 +1377,7 @@ section:nth-child(odd) .animate.scroll{
     .quote-wrapper {
         gap: 8px;
     }
-    
+
 }
 /* keyframes animation */
 
