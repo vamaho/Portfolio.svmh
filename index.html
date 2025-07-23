@@ -19,7 +19,7 @@
     <meta name="keywords" content="Samuel Valentin Marin Hoyos, Samuel Valentin Marin Hoyos portfolio, Samuel Marin portfolio, Samuel, Valentin, Marin, Hoyos, software developer, frontend developer, backend developer, fullstack developer, Golang, React, Angular, Kotlin, SQL, MySQL, PostgreSQL, JWT, cybersecurity, freelancer" >
     <meta name="author" content="Samuel Valentin Marin Hoyos" >
     <meta property="og:image" content="images/joo.jpg">
-    <title>Samuel Valentin Marin | Portfolio </title>
+    <title data-key="pageTitle">Samuel Valentin Marin | Portfolio </title>
     <link rel="stylesheet" href="css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -30,7 +30,7 @@
 <body>
     <div id="preloader">
     </div>
-    <noscript>Please enable Javascript</noscript>
+    <noscript data-key="noscript">Please enable Javascript</noscript>
    <header class="header">
     <a href="#home" class="logo">
         Samuel V.
@@ -39,30 +39,36 @@
     <div id="menu-icon" class="bx bx-menu"></div>
 
     <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" class="active" data-key="navHome">Home</a>
+        <a href="#about" data-key="navAbout">About Me</a>
+        <a href="#education" data-key="navEducation">Education</a>
+        <a href="#skills" data-key="navSkills">Skills</a>
+        <a href="#portfolio" data-key="navProjects">Projects</a>
+        <a href="#contact" data-key="navContact">Contact</a>
 
         <span class="active-nav"></span>
         <span class="animate" style="--i:2;"></span>
     </nav>
+    <div class="language-switcher">
+        <button id="lang-en" class="lang-button active-lang">EN</button>
+        <button id="lang-es" class="lang-button">ES</button>
+    </div>
 </header>
     <section class="home show-animate" id="home">
         <div class="home-content">
-            <h1><span class="kello">Hello, I'm</span> <span class="gradient-animation">Samuel Valentin Marin</span> <span class="animate" style="--i:2;"></span></h1>
+            <h1><span class="kello" data-key="helloText">Hello, I'm</span> <span class="gradient-animation">Samuel Valentin Marin</span> <span class="animate" style="--i:2;"></span></h1>
             <div class="text-animate">
-                <h3>Software Developer</h3>
+                <h3 data-key="jobTitle">Software Developer</h3>
                 <span class="animate" style="--i:3;"></span>
             </div>
-            <p>
+            <p data-key="homeParagraph">
                 "Greetings! I am <span class="highlight">Samuel Valentin Marin Hoyos</span>, a <span class="highlight">software developer</span> with 3 years of experience, standing out for my <span class="highlight">responsibility, commitment, and self-taught ability</span>. My passion for technology has led me to specialize in web and application development, with a solid foundation in <span class="highlight">HTML, CSS, JavaScript, React, Angular, and Golang</span>. I am an expert in database management with <span class="highlight">MySQL and PostgreSQL</span>, and I possess advanced knowledge in <span class="highlight">cybersecurity</span>, including the implementation of <span class="highlight">JWT</span>. My focus is always on delivering high-quality, efficient, and secure solutions. Explore my portfolio to see how I can help you achieve your technological goals."
                 <span class="animate" style="--i:3;"></span>
             </p>
-            <div class="btn-box"><a href="#contact" class="btn">Hire Me</a>
-                <a href="TuCV.pdf" class="btn">My CV</a> <span class="animate" style="--i:5;"></span>
+            <div class="btn-box">
+                <a href="#contact" class="btn" data-key="hireMeBtn">Hire Me</a>
+                <a href="TuCV.pdf" class="btn" data-key="myCvBtn">My CV</a> 
+                <span class="animate" style="--i:5;"></span>
                 <input type="checkbox" id="checkboxInput">
                 <label for="checkboxInput" class="toggleSwitch" onclick="playpause()">
             
@@ -87,16 +93,16 @@
         <span class="animate home-img" style="--i:7;"></span>
     </section>
     <section class="about" id="about" data-aos="fade-up">
-        <h2 class="heading" data-aos="fade-up"><span class="jello">About</span>
-            <span class="mello">Me</span>
+        <h2 class="heading" data-aos="fade-up"><span class="jello" data-key="aboutMeTitlePart1">About</span>
+            <span class="mello" data-key="aboutMeTitlePart2">Me</span>
              </h2>
         <div class="about-img" data-aos="fade-up">
             <img src="images/joo.jpg" alt="Image of Samuel Valentin Marin Hoyos"> <span class="circle-spin"></span>
             </div>
         <div class="about-content" data-aos="fade-up">
-            <h3>Software and Web Developer ! 
-                     </h3>
-            <p>
+            <h3 data-key="aboutSubtitle">Software and Web Developer ! 
+                             </h3>
+            <p data-key="aboutParagraph">
                 "I am a <span class="highlight">Software and Web Developer</span> with approximately 3 years of experience, combining a solid academic background with a strong self-taught focus. My journey began with the development of basic websites, mastering <span class="highlight">HTML, CSS, and JavaScript</span>, and then evolving towards advanced technologies such as <span class="highlight">React, Angular, Sass, and Golang development</span>. I possess deep knowledge in database management, specifically <span class="highlight">SQL, MySQL, and PostgreSQL</span>.
 
                 Throughout my career, I have led and contributed to the creation of various complex systems and applications, including <span class="highlight">complete platforms for cryptocurrency brokers, enterprise SaaS services, and mobile applications with Kotlin</span>. Currently, I work as a <span class="highlight">Developer and Frontend Area Leader</span> in a SaaS project for Occupational Safety and Health Management, and I lead a Cryptocurrency Broker and Virtual Casino project. My commitment to <span class="highlight">cybersecurity</span> is reflected in my experience with implementations like <span class="highlight">JWT</span>, ensuring robust and protected platforms. I am a <span class="highlight">responsible, diligent professional with a great capacity for self-learning</span>, always focused on delivering innovative and high-quality solutions."
@@ -105,18 +111,18 @@
         </div>
     </section>
     <section class="education" id="education" data-aos="fade-up">
-        <h2 class="heading"><span class="kello">My </span><span class="jello"> Journey</span></h2>
+        <h2 class="heading"><span class="kello" data-key="journeyTitlePart1">My </span><span class="jello" data-key="journeyTitlePart2"> Journey</span></h2>
         <div class="education-row" data-aos="fade-up">
             <div class="education-column" data-aos="fade-up">
-                <h3 class="title">Education</h3>
+                <h3 class="title" data-key="educationTitle">Education</h3>
                 <div class="education-box" data-aos="fade-up">
                     <div class="education-content" data-aos="fade-up">
                         <div class="content" data-aos="fade-up">
                             <div class="year" data-aos="fade-up"><i class='bx bxs-calendar'></i>2011-2023</div>
-                            <h3>
+                            <h3 data-key="highSchoolTitle">
                                 High School - Colegio Corazonista de Medellín
                             </h3>
-                            <p>
+                            <p data-key="highSchoolDescription">
                                 "I completed my high school education at Colegio Corazonista de Medellín, where I acquired a solid academic foundation and developed my critical thinking."
                             </p>
                         </div>
@@ -124,10 +130,10 @@
                     <div class="education-content" data-aos="fade-up">
                         <div class="content" data-aos="fade-up">
                             <div class="year" data-aos="fade-up"><i class='bx bxs-calendar'></i>2023-2025</div>
-                            <h3>
+                            <h3 data-key="techDegreeTitle">
                                 Software Development Technician - Universidad Pontificia Bolivariana
                             </h3>
-                            <p>
+                            <p data-key="techDegreeDescription">
                                 "At the Universidad Pontificia Bolivariana, I earned my Software Development Technician degree, where I delved into the fundamentals of programming and the software development lifecycle."
                             </p>
                         </div>
@@ -135,10 +141,10 @@
                     <div class="education-content" data-aos="fade-up">
                         <div class="content" data-aos="fade-up">
                             <div class="year" data-aos="fade-up"><i class='bx bxs-calendar'></i>2022-Present</div>
-                            <h3>
+                            <h3 data-key="selfTaughtTitle">
                                 Self-Taught Knowledge
                             </h3>
-                            <p>
+                            <p data-key="selfTaughtDescription">
                                 "Much of my technical skills and knowledge, especially in advanced technologies and programming languages, have been acquired through constant self-learning, keeping me up-to-date with the latest industry trends."
                             </p>
                         </div>
@@ -147,15 +153,15 @@
             </div>
 
             <div class="education-column" data-aos="fade-up">
-                <h3 class="title" data-aos="fade-up">Experience</h3>
+                <h3 class="title" data-aos="fade-up" data-key="experienceTitle">Experience</h3>
                 <div class="education-box" data-aos="fade-up">
                     <div class="education-content" data-aos="fade-up">
                         <div class="content">
                             <div class="year"><i class='bx bxs-calendar'></i>2022-Present</div>
-                            <h3>
+                            <h3 data-key="freelanceTitle">
                                 Freelance Developer
                             </h3>
-                            <p>
+                            <p data-key="freelanceDescription">
                                 "As a freelance developer, I have had the opportunity to work on a wide range of projects, including the creation of complete websites for cryptocurrency brokers, custom SaaS services, and mobile applications. This experience has allowed me to strengthen my skills in various technologies and adapt to different client requirements."
                             </p>
                         </div>
@@ -163,10 +169,10 @@
                     <div class="education-content" data-aos="fade-up">
                         <div class="content" data-aos="fade-up">
                             <div class="year" data-aos="fade-up"><i class='bx bxs-calendar'></i>2024-Present</div>
-                            <h3>
+                            <h3 data-key="saasLeadTitle">
                                 Developer and Frontend Area Leader - SaaS Project (Occupational Safety and Health Management)
                             </h3>
-                            <p>
+                            <p data-key="saasLeadDescription">
                                 "Currently, I lead the frontend area in a SaaS project focused on occupational safety and health management. My responsibilities include the development, optimization, and implementation of robust and scalable user interfaces, as well as the coordination of the frontend team."
                             </p>
                         </div>
@@ -174,10 +180,10 @@
                     <div class="education-content" data-aos="fade-up">
                         <div class="content" data-aos="fade-up">
                             <div class="year" data-aos="fade-up"><i class='bx bxs-calendar'></i>2024-Present</div>
-                            <h3>
+                            <h3 data-key="cryptoLeadTitle">
                                 Project Leader - Cryptocurrency Broker and Virtual Casinos
                             </h3>
-                            <p>
+                            <p data-key="cryptoLeadDescription">
                                 "In this role, I lead the development of a cryptocurrency broker and virtual casino platform. I am in charge of the architecture, design, and implementation of key functionalities, ensuring the security and efficiency of the platform."
                             </p>
                         </div>
@@ -190,10 +196,10 @@
     </section>
 
     <section class="skills" id="skills" data-aos="fade-up">
-        <h2 class="heading" data-aos="fade-up"> <span class="kello">My</span> <span class="jello">Skills</span></h2>
+        <h2 class="heading" data-aos="fade-up"> <span class="kello" data-key="skillsTitlePart1">My</span> <span class="jello" data-key="skillsTitlePart2">Skills</span></h2>
         <div class="skills-row" data-aos="fade-up">
             <div class="skills-column" data-aos="fade-up">
-                <h3 class="title" data-aos="fade-up">Technical Skills</h3>
+                <h3 class="title" data-aos="fade-up" data-key="technicalSkillsTitle">Technical Skills</h3>
                 <div class="skills-box" data-aos="fade-up">
                     <div class="skills-content" data-aos="fade-up">
                         <div class="progress" data-aos="fade-up">
@@ -262,42 +268,42 @@
             </div>
 
             <div class="skills-column" data-aos="fade-up">
-                <h3 class="title" data-aos="fade-up">Professional Skills</h3>
+                <h3 class="title" data-aos="fade-up" data-key="professionalSkillsTitle">Professional Skills</h3>
                 <div class="skills-box" data-aos="fade-up">
                     
                     <div class="skills-content" data-aos="fade-up">
                         <div class="progress" data-aos="fade-up">
-                            <h3>Communication <span>90%</span></h3>
+                            <h3><span data-key="communicationSkill">Communication</span> <span>90%</span></h3>
                             <div class="bar"><span style="width: 90%;"></span></div>
                         </div>
 
                         <div class="progress" data-aos="fade-up">
-                            <h3>Leadership <span>85%</span></h3>
+                            <h3><span data-key="leadershipSkill">Leadership</span> <span>85%</span></h3>
                             <div class="bar"><span style="width: 85%;"></span></div>
                         </div>
 
                         <div class="progress" data-aos="fade-up">
-                            <h3>Project Management <span>80%</span></h3>
+                            <h3><span data-key="projectManagementSkill">Project Management</span> <span>80%</span></h3>
                             <div class="bar"><span style="width: 80%;"></span></div>
                         </div>
 
                         <div class="progress" data-aos="fade-up">
-                            <h3>Cybersecurity (JWT) <span>75%</span></h3>
+                            <h3><span data-key="cybersecuritySkill">Cybersecurity (JWT)</span> <span>75%</span></h3>
                             <div class="bar"><span style="width: 75%;"></span></div>
                         </div>
 
                         <div class="progress" data-aos="fade-up">
-                            <h3>Interface Design <span>70%</span></h3>
+                            <h3><span data-key="interfaceDesignSkill">Interface Design</span> <span>70%</span></h3>
                             <div class="bar"><span style="width: 70%;"></span></div>
                         </div>
                         
                         <div class="progress" data-aos="fade-up">
-                            <h3>English <span>B2-C1</span></h3>
+                            <h3><span data-key="englishSkill">English</span> <span>B2-C1</span></h3>
                             <div class="bar"><span style="width: 85%;"></span></div> 
                         </div>
 
                         <div class="progress" data-aos="fade-up">
-                            <h3>Artificial Intelligence (AI) <span>80%</span></h3>
+                            <h3><span data-key="aiSkill">Artificial Intelligence (AI)</span> <span>80%</span></h3>
                             <div class="bar"><span style="width: 80%;"></span></div> 
                         </div>
                     </div>
@@ -307,89 +313,89 @@
     </section>
 
     <section class="portfolio" id="portfolio">
-    <h2 class="heading">My <span>Projects</span></h2>
+    <h2 class="heading" data-key="projectsHeading">My <span>Projects</span></h2>
     <div class="project-info">
-        <p>Please note: The projects displayed here are currently in their development phase.</p>
-        <p>Additionally, many other projects are not shown due to confidentiality agreements.</p>
+        <p data-key="projectsNote1">Please note: The projects displayed here are currently in their development phase.</p>
+        <p data-key="projectsNote2">Additionally, many other projects are not shown due to confidentiality agreements.</p>
     </div>
     <div class="portfolio-container">
         <div class="portfolio-box">
             <img src="images/ae.jpg" alt="Image of a cryptocurrency broker project"> <div class="portfolio-layer">
-                <h4>Cryptocurrency Broker Platforms</h4>
-                <p>Comprehensive development of platforms for the exchange and management of cryptocurrencies, ensuring secure and efficient transactions.</p>
+                <h4 data-key="cryptoBrokerTitle">Cryptocurrency Broker Platforms</h4>
+                <p data-key="cryptoBrokerDescription">Comprehensive development of platforms for the exchange and management of cryptocurrencies, ensuring secure and efficient transactions.</p>
                 <a href='#'><i class='bx bx-link-external' ></i></a> </div>
         </div> 
 
         <div class="portfolio-box">
             <img src="images/ae.jpg" alt="Image of a SaaS project"> <div class="portfolio-layer">
-                <h4>SaaS Systems for Businesses</h4>
-                <p>Creation of customized Software as a Service (SaaS) solutions to optimize business processes and improve productivity.</p>
+                <h4 data-key="saasSystemsTitle">SaaS Systems for Businesses</h4>
+                <p data-key="saasSystemsDescription">Creation of customized Software as a Service (SaaS) solutions to optimize business processes and improve productivity.</p>
                 <a href="#"><i class='bx bx-link-external' ></i></a> </div>
         </div>
 
         <div class="portfolio-box">
             <img src="images/ae.jpg" alt="Image of a virtual casino project"> <div class="portfolio-layer">
-                <h4>Virtual Casinos</h4>
-                <p>Development of virtual gaming platforms, implementing security and a smooth user experience.</p>
+                <h4 data-key="virtualCasinosTitle">Virtual Casinos</h4>
+                <p data-key="virtualCasinosDescription">Development of virtual gaming platforms, implementing security and a smooth user experience.</p>
                 <a href="#"><i class='bx bx-link-external' ></i></a> </div>
         </div>
 
         <div class="portfolio-box">
             <img src="images/ae.jpg" alt="Image of a Marketplace project"> <div class="portfolio-layer">
-                <h4>Marketplaces</h4>
-                <p>Construction of robust e-commerce platforms, facilitating interaction between buyers and sellers.</p>
+                <h4 data-key="marketplacesTitle">Marketplaces</h4>
+                <p data-key="marketplacesDescription">Construction of robust e-commerce platforms, facilitating interaction between buyers and sellers.</p>
                 <a href="#"><i class='bx bx-link-external' ></i></a> </div>
         </div>
 
         <div class="portfolio-box">
             <img src="images/ae.jpg" alt="Image of a mobile application project"> <div class="portfolio-layer">
-                <h4>Mobile Applications with Kotlin</h4>
-                <p>Development of native Android applications using Kotlin, focused on usability and performance.</p>
+                <h4 data-key="kotlinAppsTitle">Mobile Applications with Kotlin</h4>
+                <p data-key="kotlinAppsDescription">Development of native Android applications using Kotlin, focused on usability and performance.</p>
                 <a href="#"><i class='bx bx-link-external' ></i></a> </div>
         </div>
 
         <div class="portfolio-box">
             <img src="images/ae.jpg" alt="Image of a system project"> <div class="portfolio-layer">
-                <h4>Other Systems and Applications</h4>
-                <p>Extensive experience in developing various systems and applications, adapting to the specific requirements of each project.</p>
+                <h4 data-key="otherSystemsTitle">Other Systems and Applications</h4>
+                <p data-key="otherSystemsDescription">Extensive experience in developing various systems and applications, adapting to the specific requirements of each project.</p>
                 <a href="#"><i class='bx bx-link-external' ></i></a> </div>
         </div>
     </div>
 </section>
 
     <section class="contact" id="contact" data-aos="fade-up">
-    <h2 class="heading" data-aos="fade-up" ><span class="mello">Contact Me </span><span class="kello"> Now</span></h2>
+    <h2 class="heading" data-aos="fade-up" ><span class="mello" data-key="contactMeTitlePart1">Contact Me </span><span class="kello" data-key="contactMeTitlePart2"> Now</span></h2>
     
     <form action="https://formsubmit.co/samuelvalentin5013@gmail.com" method="post">
         
         <div class="input-box">
             <div class="input-field">
-                <input name="full-name" type="text" placeholder= "Full Name" required>
+                <input name="full-name" type="text" placeholder= "Full Name" required data-key="fullNamePlaceholder">
                 <span class="focus"></span>
             </div>
             <div class="input-field">
-                <input  name="email-address" type="text" placeholder= "Email Address" required>
+                <input  name="email-address" type="text" placeholder= "Email Address" required data-key="emailPlaceholder">
                 <span class="focus"></span>
             </div>
         </div>
 
         <div class="input-box">
             <div class="input-field">
-                <input name="number" type="number" placeholder= "Phone Number" required>
+                <input name="number" type="number" placeholder= "Phone Number" required data-key="phonePlaceholder">
                 <span class="focus"></span>
             </div>
             <div class="input-field">
-                <input name="email-sub" type="text" placeholder= "Message Subject" required>
+                <input name="email-sub" type="text" placeholder= "Message Subject" required data-key="subjectPlaceholder">
                 <span class="focus"></span>
             </div>
         </div>
 
         <div class="textarea-field">
-            <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message" required data-key="messagePlaceholder"></textarea>
             <span class="focus"></span>
         </div>
         <div class="btn-box btns">
-            <button type="submit" class="btn">Send Message</button>
+            <button type="submit" class="btn" data-key="sendMessageBtn">Send Message</button>
         </div>
         <input type="hidden" name="_captcha" value="false">
     </form>
@@ -402,13 +408,13 @@
     <div class="footer-foreground">
         <div class="footer-quote">
             <div class="quote-wrapper">
-                "<p class="shine">Development,</p> <p class="shine">Leadership,</p> <p>Success</p> <p class="shine">Guaranteed.</p>"
+                "<p class="shine" data-key="footerQuote1">Development,</p> <p class="shine" data-key="footerQuote2">Leadership,</p> <p data-key="footerQuote3">Success</p> <p class="shine" data-key="footerQuote4">Guaranteed.</p>"
             </div>
         </div>
     </div>
     <div class="footer-bottom">
         <div class="footer-text">
-            <p>Developed by Samuel Valentin Marin Hoyos &copy; 2025 | All rights reserved.</p>
+            <p data-key="footerText">Developed by Samuel Valentin Marin Hoyos &copy; 2025 | All rights reserved.</p>
         </div>
         <div class="footer-iconTop">
             <a href="#"><img class="rocketIcon" src="./images/rocket.png" alt="Back to Top"></a>
