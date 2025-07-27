@@ -258,7 +258,7 @@ section{
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url(img/sssss.jpg) no-repeat;
+    background: url(img/foto.jpg) no-repeat;
     background-color: 0.01;
     background-size : 50% auto;
     background-position: right;
@@ -938,6 +938,7 @@ span{
   }
 
   .footer{
+    padding-top: 3rem;
     position: relative;
     background: var(--second-bg-color);
     overflow: hidden;
@@ -1031,6 +1032,7 @@ span{
     align-items: center;
     background-color: black;
     padding: 20px 40px;
+    margin-bottom: 4rem;
 }
 .education,
 .skills{
