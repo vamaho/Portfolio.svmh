@@ -130,13 +130,17 @@ const translations = {
         navContact: "Contact",
         helloText: "Hello, I'm",
         jobTitle: "Software Developer",
-        homeParagraph: '"Greetings! I am <span class="highlight">Samuel Valentin Marin Hoyos</span>, a <span class="highlight">software developer</span> with 3 years of experience, standing out for my <span class="highlight">responsibility, commitment, and self-taught ability</span>. My passion for technology has led me to specialize in web and application development, with a solid foundation in <span class="highlight">HTML, CSS, JavaScript, React, Angular, and Golang</span>. I am an expert in database management with <span class="highlight">MySQL and PostgreSQL</span>, and I possess advanced knowledge in <span class="highlight">cybersecurity</span>, including the implementation of <span class="highlight">JWT</span>. My focus is always on delivering high-quality, efficient, and secure solutions. Explore my portfolio to see how I can help you achieve your technological goals."',
+        
+        homeParagraph:" ",
+        
         hireMeBtn: "Hire Me",
         myCvBtn: "My CV",
         aboutMeTitlePart1: "About",
         aboutMeTitlePart2: "Me",
         aboutSubtitle: "Software and Web Developer !",
+
         aboutParagraph: '"I am a <span class="highlight">Software and Web Developer</span> with approximately 3 years of experience, combining a solid academic background with a strong self-taught focus. My journey began with the development of basic websites, mastering <span class="highlight">HTML, CSS, and JavaScript</span>, and then evolving towards advanced technologies such as <span class="highlight">React, Angular, Sass, and Golang development</span>. I possess deep knowledge in database management, specifically <span class="highlight">SQL, MySQL, and PostgreSQL</span>. Throughout my career, I have led and contributed to the creation of various complex systems and applications, including <span class="highlight">complete platforms for cryptocurrency brokers, enterprise SaaS services, and mobile applications with Kotlin</span>. Currently, I work as a <span class="highlight">Developer and Frontend Area Leader</span> in a SaaS project for Occupational Safety and Health Management, and I lead a Cryptocurrency Broker and Virtual Casino project. My commitment to <span class="highlight">cybersecurity</span> is reflected in my experience with implementations like <span class="highlight">JWT</span>, ensuring robust and protected platforms. I am a <span class="highlight">responsible, diligent professional with a great capacity for self-learning</span>, always focused on delivering innovative and high-quality solutions."',
+        
         journeyTitlePart1: "My ",
         journeyTitlePart2: "Journey",
         educationTitle: "Education",
@@ -203,14 +207,18 @@ const translations = {
         navProjects: "Proyectos",
         navContact: "Contacto",
         helloText: "Hola, soy",
-        jobTitle: "Desarrollador de Software",
-        homeParagraph: '"¡Saludos! Soy <span class="highlight">Samuel Valentín Marín Hoyos</span>, un <span class="highlight">desarrollador de software</span> con 3 años de experiencia, destacando por mi <span class="highlight">responsabilidad, compromiso y autodidactismo</span>. Mi pasión por la tecnología me ha llevado a especializarme en el desarrollo web y de aplicaciones, con una sólida base en <span class="highlight">HTML, CSS, JavaScript, React, Angular y Golang</span>. Soy experto en gestión de bases de datos con <span class="highlight">MySQL y PostgreSQL</span>, y poseo conocimientos avanzados en <span class="highlight">ciberseguridad</span>, incluyendo la implementación de <span class="highlight">JWT</span>. Mi enfoque siempre está en entregar soluciones de alta calidad, eficientes y seguras. Explora mi portafolio para ver cómo puedo ayudarte a alcanzar tus metas tecnológicas."',
+        jobTitle: "Desarrollador Web y de Software",
+
+        homeParagraph:"",
+
         hireMeBtn: "Contrátame",
         myCvBtn: "Mi CV",
         aboutMeTitlePart1: "Sobre",
         aboutMeTitlePart2: "Mí",
         aboutSubtitle: "¡Desarrollador de Software y Web!",
+
         aboutParagraph: '"Soy un <span class="highlight">Desarrollador de Software y Web</span> con aproximadamente 3 años de experiencia, combinando una sólida formación académica con un fuerte enfoque autodidacta. Mi trayectoria comenzó con el desarrollo de sitios web básicos, dominando <span class="highlight">HTML, CSS y JavaScript</span>, para luego evolucionar hacia tecnologías avanzadas como <span class="highlight">React, Angular, Sass y desarrollo en Golang</span>. Poseo un profundo conocimiento en gestión de bases de datos, específicamente <span class="highlight">SQL, MySQL y PostgreSQL</span>. A lo largo de mi carrera, he liderado y contribuido a la creación de diversos sistemas y aplicaciones complejos, incluyendo <span class="highlight">plataformas completas para brókers de criptomonedas, servicios SaaS empresariales y aplicaciones móviles con Kotlin</span>. Actualmente, me desempeño como <span class="highlight">Desarrollador y Líder de Área Frontend</span> en un proyecto SaaS de Gestión de Seguridad y Salud en el Trabajo, y lidero un proyecto de Bróker de Criptomonedas y Casinos Virtuales. Mi compromiso con la <span class="highlight">ciberseguridad</span> se refleja en mi experiencia con implementaciones como <span class="highlight">JWT</span>, asegurando plataformas robustas y protegidas. Soy un profesional <span class="highlight">responsable, diligente y con una gran capacidad de autoaprendizaje</span>, siempre enfocado en entregar soluciones innovadoras y de alta calidad."',
+        
         journeyTitlePart1: "Mi ",
         journeyTitlePart2: "Trayectoria",
         educationTitle: "Educación",
