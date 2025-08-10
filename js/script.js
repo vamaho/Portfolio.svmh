@@ -129,8 +129,8 @@ const translations = {
         navProjects: "Projects",
         navContact: "Contact",
         helloText: "Hello, I'm",
-        jobTitle: "Software Developer",
-        
+        jobTitle: "Web and Software Developer",
+
         homeParagraph:" ",
         
         hireMeBtn: "Hire Me",
@@ -284,13 +284,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set initial language based on local storage or default
     setLanguage(currentLang);
 
-    langButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const lang = button.id.replace('lang-', '');
-            setLanguage(lang);
-            localStorage.setItem('lang', lang); // Save selected language
-        });
+langButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const lang = button.id.replace('lang-', '');
+        setLanguage(lang);
+        localStorage.setItem('lang', lang);
+        updateCVLink(lang); // Asegurarse de que el enlace se actualice
     });
+});
 
     function setLanguage(lang) {
         const elements = document.querySelectorAll('[data-key]');
@@ -370,5 +371,45 @@ document.addEventListener('DOMContentLoaded', () => {
         let footer = document.querySelector('footer');
         footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
     };
+// Función para actualizar el enlace del CV según el idioma
+function updateCVLink(lang) {
+    const cvLink = document.getElementById('cv-download');
+    if (cvLink) {
+        cvLink.href = lang === 'es' ? 'CV-es.pdf' : 'CV-en.pdf';
+        // Opcional: forzar la descarga con un nombre específico
+        cvLink.setAttribute('download', `Samuel_Marin_CV_${lang.toUpperCase()}.pdf`);
+    }
+}
 
+// Modifica la función setLanguage para incluir la actualización del CV
+function setLanguage(lang) {
+    const elements = document.querySelectorAll('[data-key]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.innerHTML = translations[lang][key];
+            }
+        }
+    });
+
+    // Actualizar el enlace del CV
+    updateCVLink(lang);
+
+    // Update active class for language buttons
+    langButtons.forEach(button => {
+        button.classList.remove('active-lang');
+        if (button.id === `lang-${lang}`) {
+            button.classList.add('active-lang');
+        }
+    });
+
+    // Update the html lang attribute
+    document.documentElement.lang = lang;
+}
+
+// Llama a updateCVLink al cargar la página con el idioma actual
+updateCVLink(currentLang);
 });
